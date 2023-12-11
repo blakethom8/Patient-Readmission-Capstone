@@ -47,9 +47,13 @@ Thus, to improve performance moving forward, we would first seek to see if we co
 *Methodology*
 
   Data Preparation: In general, we cleaned, transformed, and structured a number of features for analysis. This included aggregating information about their medical history and summarizing information related to their first hospital admission. Once aggregated, we explored the object features to assess if we needed to combine categories. The Language feature was the object feature that required the most re-categorization. 
+  
   Feature Selection: After initial results, we did go back and add BMI and Blood Pressure data to the model. This showed modest improvement in model performance. After adding in the features, we explored reducing the number of features and selecting only the top 10 features that are most impactful in the model. However, reducing the number of features did not result in improvement of overall model performance.
+  
   Feature Engineering: We created OneHot Encoding for the categorical features and StandardScaler for the numerical features. In addition, we explored using PolynomialFeatures for the numerical features. Interestingly, adding PolynomialFeatures to the pipeline decreased the performance of the models. 
-  Model Development: We experimented primarily with 4 different classification models. These included Random Forest, Logistic Regression, Support Vector Machines, and Gradient Boosting. We also experimented with AdaBoostClassifier.  
+  
+  Model Development: We experimented primarily with 4 different classification models. These included Random Forest, Logistic Regression, Support Vector Machines, and Gradient Boosting. We also experimented with AdaBoostClassifier. 
+  
   Validation: We assessed the model performance by assessing the Area-Under-Curve and analyzing the confusion matrix from the results.  
 
 *Results* 
